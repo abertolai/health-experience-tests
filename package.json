@@ -1,0 +1,17 @@
+{
+  "name": "healthxp-web-tests",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes E2E em Cypress",
+  "main": "index.js",
+  "author": "Amanda Bertolai",
+  "license": "MIT",
+  "keywords": [
+    "cypress",
+    "healthxp",
+    "e2e"
+  ],
+  "devDependencies": {
+    "cypress": "^12.17.0",
+    "pg": "^8.11.1"
+  }
+}
