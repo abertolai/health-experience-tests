@@ -4,13 +4,15 @@
 Projeto de testes E2E do sistema WEB Health Experience
 
 <h2>Como executar o projeto</h2>
-Pré-requisitos: É necessário ter o NodeJS e GIT instalado na sua máquina.
+Pré-requisitos: É necessário ter o <b>NodeJS</b> e <b>GIT</b> instalado na sua máquina.
 
-<h2>Executando o projeto</h2>
-<li>
-    <lu>Baixar o projeto na sua máquina.</lu>
-    <lu>Instalar as dependências rodando o comando: npm install ou yarn install </lu>
-    <lu>Acessar a pasta cypress pelo terminal</lu>
-    <lu>Rodar o comando abaixo para executar os testes:</lu>
-    <p>npx cypress run ou yarn cypress run</p>
-</li>
+<h3>Passo a passo para executar os testes</h3>
+<ol>
+    <li>Baixar o projeto na sua máquina.</li>
+    <li>Instalar as dependências rodando o comando: </li>
+        <p><b><i>npm install</i></b> ou <b><i>yarn install</i></b> </p>
+    <li>Acessar a pasta cypress pelo terminal</li>
+    <p><i><b>cd cypress</b></i></p>
+    <li>Rodar o comando abaixo para executar os testes:</li>
+    <p><i><b>npx cypress run</i></b> ou <b><i>yarn cypress run</i></b></p>
+</ol>
