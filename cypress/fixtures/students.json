@@ -26,5 +26,44 @@
     "age": "",
     "weight": "",
     "feet_tall": ""
-  }
+  },
+  "inv_age": {
+    "name": "Tamires Goith",
+    "email": "tamires@yahoo.com",
+    "age": "15",
+    "weight": "62",
+    "feet_tall": "1.60"
+  },
+  "inv_weight": [
+    {
+      "name": "Claudia Mercantil",
+      "email": "claudia@gmail.com",
+      "age": "16",
+      "weight": "0",
+      "feet_tall": "1.65"
+    },
+    {
+      "name": "Claudia Mercantil",
+      "email": "claudia@gmail.com",
+      "age": "16",
+      "weight": "-1",
+      "feet_tall": "1.65"
+    }
+  ],
+  "inv_feet_tall": [
+    {
+      "name": "Claudia Mercantil",
+      "email": "claudia@gmail.com",
+      "age": "16",
+      "weight": "56",
+      "feet_tall": "0"
+    },
+    {
+      "name": "Claudia Mercantil",
+      "email": "claudia@gmail.com",
+      "age": "16",
+      "weight": "56",
+      "feet_tall": "-1"
+    }
+  ]
 }

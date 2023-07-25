@@ -41,14 +41,46 @@ describe("alunos", () => {
     studentPage.goToRegister();
     studentPage.submitForm(student);
 
-    studentPage.requiredMessage("Nome completo", "Nome é obrigatório");
-    studentPage.requiredMessage("E-mail", "O email é obrigatório");
-    studentPage.requiredMessage("Idade", "A idade é obrigatória");
-    studentPage.requiredMessage("Peso (em kg)", "O peso é obrigatório");
-    studentPage.requiredMessage("Altura", "A altura é obrigatória");
+    studentPage.alertMessage("Nome completo", "Nome é obrigatório");
+    studentPage.alertMessage("E-mail", "O email é obrigatório");
+    studentPage.alertMessage("Idade", "A idade é obrigatória");
+    studentPage.alertMessage("Peso (em kg)", "O peso é obrigatório");
+    studentPage.alertMessage("Altura", "A altura é obrigatória");
   });
 
-  //Automatizar o cenário onde o administrador tenta cadastrar um aluno com idade menor de 16 anos
-  //Quando peso é igual ou menor que zero, deve retornar a mensagem: "Peso não permitido"
-  //Quando a altura é igual ou menor que zero, deve retornar a mensagem: "Altura não permitida"
+  it("não deve permitir cadastrar um aluno com idade menor que 16 anos", () => {
+    const student = students.inv_age;
+
+    cy.adminLogin();
+    studentPage.goToRegister();
+    studentPage.submitForm(student);
+
+    studentPage.alertMessage("Idade", "A idade mínima para treinar é 16 anos!");
+  });
+
+  it("não deve permitir cadastrar aluno com peso igual ou menor que zero", () => {
+    const schoolboy = students.inv_weight;
+
+    cy.adminLogin();
+    studentPage.goToRegister();
+
+    schoolboy.forEach((s) => {
+      cy.task("deleteStudent", s.email);
+      studentPage.submitForm(s);
+      studentPage.alertMessage("Peso (em kg)", "Peso não permitido");
+    });
+  });
+
+  it("não deve permitir cadastrar aluno com altura igual ou menor que zero", () => {
+    const schoolboy = students.inv_feet_tall;
+
+    cy.adminLogin();
+    studentPage.goToRegister();
+
+    schoolboy.forEach((s) => {
+      cy.task("deleteStudent", s.email);
+      studentPage.submitForm(s);
+      studentPage.alertMessage("Altura", "Altura não permitida");
+    });
+  });
 });
