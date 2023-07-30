@@ -9,13 +9,13 @@ class LoginPage {
   }
 
   fill(user) {
-    if (user.email) {
-      cy.get("#email").clear({ force: true }).type(user.email);
-    }
+    cy.get("#email").clear({ force: true }).as("email");
+    cy.get("#password").clear({ force: true }).as("password");
 
-    if (user.password) {
-      cy.get("#password").clear({ force: true }).type(user.password);
-    }
+    user.email ? cy.get("@email").type(user.email) : cy.log("empty email");
+    user.password
+      ? cy.get("@password").type(user.password)
+      : cy.log("empty password");
   }
 
   submit() {
