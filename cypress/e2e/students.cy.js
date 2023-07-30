@@ -65,7 +65,6 @@ describe("alunos", () => {
     studentPage.goToRegister();
 
     schoolboy.forEach((s) => {
-      cy.task("deleteStudent", s.email);
       studentPage.submitForm(s);
       studentPage.alertMessage("Peso (em kg)", "Peso não permitido");
     });
@@ -78,7 +77,6 @@ describe("alunos", () => {
     studentPage.goToRegister();
 
     schoolboy.forEach((s) => {
-      cy.task("deleteStudent", s.email);
       studentPage.submitForm(s);
       studentPage.alertMessage("Altura", "Altura não permitida");
     });
