@@ -5,7 +5,7 @@ class LoginPage {
     this.popup = popup;
   }
   go() {
-    cy.visit("http://localhost:3000");
+    cy.visit("/");
   }
 
   fill(user) {

@@ -1,4 +1,6 @@
 const { defineConfig } = require("cypress");
+require("dotenv/config");
+
 const { Pool } = require("pg");
 
 const dbConfig = {
@@ -74,6 +76,10 @@ module.exports = defineConfig({
           });
         },
       });
+    },
+    baseUrl: process.env.BASE_URL,
+    env: {
+      apiHelper: process.env.API_HELPER,
     },
   },
 });
