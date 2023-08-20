@@ -4,3 +4,4 @@ screenshots/
 videos/
 
 .env
+.DS_Store
