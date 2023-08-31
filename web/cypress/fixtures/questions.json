@@ -1,0 +1,17 @@
+{
+  "create": {
+    "student": {
+      "name": "Amanda Roberta Bertolai",
+      "email": "amandabertolai@yahoo.com",
+      "age": "28",
+      "weight": "60",
+      "feet_tall": "1.57"
+    },
+    "plan": {
+      "id": 2,
+      "name": "Premium",
+      "price": 99.99
+    },
+    "question": "Qual o melhor termogênico?"
+  }
+}

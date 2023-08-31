@@ -12,13 +12,16 @@ const pool = new Pool({
 
 const deleteAndCreateStudent = (req, res) => {
   const student = req.body;
-  const query = `
-                    WITH add AS (
+
+  const queryDelete = `
+                        DELETE FROM students WHERE email = $1
+                      `;
+
+  const queryInsert = `
                         INSERT INTO students (name, email, age, weight, feet_tall) 
                         VALUES ($1, $2, $3, $4, $5)
-                    )
-                    DELETE FROM students WHERE email = $2;
-                `;
+                        RETURNING id as student_id;
+                      `;
 
   const values = [
     student.name,
@@ -28,11 +31,16 @@ const deleteAndCreateStudent = (req, res) => {
     student.feet_tall,
   ];
 
-  pool.query(query, values, function (error, result) {
+  pool.query(queryDelete, [student.email], function (error) {
     if (error) {
       return res.status(500).json(error);
     }
-    res.status(201).json(result);
+    pool.query(queryInsert, values, function (error, result) {
+      if (error) {
+        return res.status(500).json(error);
+      }
+      res.status(201).json({ student_id: result.rows[0].student_id });
+    });
   });
 };
 
