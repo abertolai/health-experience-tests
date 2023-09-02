@@ -1,10 +1,12 @@
 import navbar from "./components/Navbar";
 import popup from "./components/Popup";
+import notifications from "./components/Notifications";
 
 class StudentPage {
   constructor() {
     this.navbar = navbar;
     this.popup = popup;
+    this.notifications = notifications;
   }
 
   goToRegister() {

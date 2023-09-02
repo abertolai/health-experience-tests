@@ -1,5 +1,5 @@
 {
-  "create": {
+  "notification": {
     "student": {
       "name": "Amanda Roberta Bertolai",
       "email": "amandabertolai@yahoo.com",
@@ -13,5 +13,21 @@
       "price": 99.99
     },
     "question": "Qual o melhor termogênico?"
+  },
+  "prof_answer": {
+    "student": {
+      "name": "José Bonifácio",
+      "email": "jose@gmail.com",
+      "age": "28",
+      "weight": "60",
+      "feet_tall": "1.57"
+    },
+    "plan": {
+      "id": 2,
+      "name": "Premium",
+      "price": 99.99
+    },
+    "question": "Como ganhar massa magra?",
+    "answer": "Comer bastante proteina"
   }
 }

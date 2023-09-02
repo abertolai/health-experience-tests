@@ -6,6 +6,10 @@ class Navbar {
   goToEnrolls() {
     cy.get('a[href="/enrollments"]').click();
   }
+
+  openNotifications() {
+    cy.get(".notifications button").click({ force: true });
+  }
 }
 
 export default new Navbar();
