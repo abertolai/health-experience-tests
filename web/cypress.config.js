@@ -77,6 +77,7 @@ module.exports = defineConfig({
         },
       });
     },
+    projectId: "5dh5tm",
     baseUrl: process.env.BASE_URL,
     env: {
       apiHelper: process.env.API_HELPER,

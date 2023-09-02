@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Projeto de automação de testes E2E em Cypress",
   "main": "index.js",
+  "scripts": {
+    "test": "node runner.js"
+  },
   "author": "Amanda Bertolai",
   "license": "MIT",
   "keywords": [
@@ -12,6 +15,7 @@
   ],
   "devDependencies": {
     "cypress": "13.0.0",
+    "cypress-tesults-reporter": "^1.4.1",
     "pg": "^8.11.1"
   },
   "dependencies": {
