@@ -4,7 +4,6 @@ module.exports = {
   locators: {
     ip: { android: "#ipAddress" },
     enrollment: { android: "#enrollment_code" },
-    message: { android: "#android:id/message" },
   },
   // insert your locators and methods here
   submit(enrollmentCode) {
@@ -17,10 +16,5 @@ module.exports = {
     I.fillField(this.locators.enrollment, enrollmentCode);
 
     I.tap("Entrar");
-  },
-
-  messageHaveText(text) {
-    I.waitForElement(this.locators.message, 5);
-    I.see(text, this.locators.message);
   },
 };

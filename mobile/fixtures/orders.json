@@ -1,0 +1,17 @@
+{
+  "help": {
+    "student": {
+      "name": "Juliana Aparecida",
+      "email": "juju@yahoo.com",
+      "age": "28",
+      "weight": "60",
+      "feet_tall": "1.57"
+    },
+    "plan": {
+      "id": 2,
+      "name": "Premium",
+      "price": 99.99
+    },
+    "question": "Qual o melhor termogênico?"
+  }
+}

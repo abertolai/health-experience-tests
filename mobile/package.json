@@ -21,6 +21,7 @@
         "webdriverio": "^6.12.1"
     },
     "dependencies": {
-        "appium": "^1.22.3"
+        "appium": "^1.22.3",
+        "codeceptjs-tesults": "^1.1.0"
     }
 }
