@@ -2,6 +2,7 @@ node_modules/
 downloads/
 screenshots/
 videos/
+output/
 
 .env
 .DS_Store
